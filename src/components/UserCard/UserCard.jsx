@@ -1,7 +1,6 @@
 import Rating from '../Rating/Rating'
 import './UserCard.css'
 
-
 const style = {
     display: 'flex'
 }
