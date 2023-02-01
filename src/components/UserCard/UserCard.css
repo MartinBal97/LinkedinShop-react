@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.persons {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(36, 155, 199);
+    width: 18rem;
+    border-radius: 20px;
+}
+.persons * {
+    margin: 5px;
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import people from './JSON/people.json'
+import UserCard from './components/UserCard/UserCard.jsx'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const style = {
+  containerPadre:{
+  display:'flex',
+  flexWrap:'wrap'
+  }
 }
 
-export default App;
+export default function App() {
+
+  return (
+   <div style={style.containerPadre}>
+      {people.map(person => {
+        return (
+          <UserCard person={person} key={person.name}/>
+        )
+      })}
+   </div>
+  )
+}
+
+
